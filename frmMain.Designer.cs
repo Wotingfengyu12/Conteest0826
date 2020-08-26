@@ -23,10 +23,10 @@ namespace CQC.ConTest
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions customHeaderButtonImageOptions1 = new DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions customHeaderButtonImageOptions2 = new DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions customHeaderButtonImageOptions5 = new DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions customHeaderButtonImageOptions6 = new DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.NodeImageCollection = new DevExpress.Utils.SvgImageCollection(this.components);
             this.mainMenuSvgImages = new DevExpress.Utils.SvgImageCollection(this.components);
             this.barManager = new DevExpress.XtraBars.ToolbarForm.ToolbarFormManager(this.components);
@@ -419,6 +419,7 @@ namespace CQC.ConTest
             this.iNewCase.ImageOptions.ImageIndex = 1;
             this.iNewCase.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.iNewCase.Name = "iNewCase";
+            this.iNewCase.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.iNewCase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iNewItemClick);
             // 
             // iNewProject
@@ -464,6 +465,7 @@ namespace CQC.ConTest
             this.iAddExistingCase.ImageOptions.ImageIndex = 4;
             this.iAddExistingCase.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.iAddExistingCase.Name = "iAddExistingCase";
+            this.iAddExistingCase.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.iAddExistingCase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iNewItemClick);
             // 
             // iAddHartDevice
@@ -749,33 +751,37 @@ namespace CQC.ConTest
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl1.Location = new System.Drawing.Point(0, 30);
+            this.barDockControl1.Location = new System.Drawing.Point(0, 37);
             this.barDockControl1.Manager = this.barManager;
-            this.barDockControl1.Size = new System.Drawing.Size(970, 56);
+            this.barDockControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl1.Size = new System.Drawing.Size(1212, 68);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 527);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 659);
             this.barDockControl2.Manager = this.barManager;
-            this.barDockControl2.Size = new System.Drawing.Size(970, 23);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl2.Size = new System.Drawing.Size(1212, 29);
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 86);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 105);
             this.barDockControl3.Manager = this.barManager;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 441);
+            this.barDockControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 554);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(970, 86);
+            this.barDockControl4.Location = new System.Drawing.Point(1212, 105);
             this.barDockControl4.Manager = this.barManager;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 441);
+            this.barDockControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 554);
             // 
             // dockManager
             // 
@@ -835,29 +841,32 @@ namespace CQC.ConTest
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.FloatSize = new System.Drawing.Size(253, 266);
             this.dockPanel1.ID = new System.Guid("70a62a0b-1c55-4e72-bef0-661a97c3e934");
-            this.dockPanel1.Location = new System.Drawing.Point(0, 86);
+            this.dockPanel1.Location = new System.Drawing.Point(0, 105);
+            this.dockPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.OriginalSize = new System.Drawing.Size(237, 266);
             this.dockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.SavedIndex = 1;
-            this.dockPanel1.Size = new System.Drawing.Size(237, 441);
+            this.dockPanel1.Size = new System.Drawing.Size(296, 554);
             this.dockPanel1.TabText = "Test Project";
             this.dockPanel1.Text = "Test Project";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.testProjectExplorer);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(3, 30);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 37);
+            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(230, 408);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(286, 513);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // testProjectExplorer
             // 
             this.testProjectExplorer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.testProjectExplorer.Location = new System.Drawing.Point(0, 0);
+            this.testProjectExplorer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.testProjectExplorer.Name = "testProjectExplorer";
-            this.testProjectExplorer.Size = new System.Drawing.Size(230, 408);
+            this.testProjectExplorer.Size = new System.Drawing.Size(286, 513);
             this.testProjectExplorer.TabIndex = 0;
             this.testProjectExplorer.DisplayTextEvent += new System.Action<CQC.Controls.Models.TestCaseModel>(this.testProjectExplorer_DisplayTextEvent);
             this.testProjectExplorer.PropertiesItemClick += new System.EventHandler(this.solutionExplorer_PropertiesItemClick);
@@ -875,38 +884,40 @@ namespace CQC.ConTest
             this.panelContainer2.FloatSize = new System.Drawing.Size(304, 139);
             this.panelContainer2.FloatVertical = true;
             this.panelContainer2.ID = new System.Guid("ec7b92c0-cfe1-43c3-9ff0-c24e6320f016");
-            this.panelContainer2.Location = new System.Drawing.Point(237, 317);
+            this.panelContainer2.Location = new System.Drawing.Point(296, 397);
+            this.panelContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContainer2.Name = "panelContainer2";
             this.panelContainer2.Options.ShowAutoHideButton = false;
             this.panelContainer2.Options.ShowCloseButton = false;
             this.panelContainer2.Options.ShowMaximizeButton = false;
             this.panelContainer2.OriginalSize = new System.Drawing.Size(200, 210);
-            this.panelContainer2.Size = new System.Drawing.Size(733, 210);
+            this.panelContainer2.Size = new System.Drawing.Size(916, 262);
             this.panelContainer2.Tabbed = true;
             this.panelContainer2.Text = "panelContainer2";
             // 
             // dockPanel5
             // 
             this.dockPanel5.Controls.Add(this.dockPanel5_Container);
-            customHeaderButtonImageOptions1.ImageIndex = 51;
-            customHeaderButtonImageOptions1.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
-            customHeaderButtonImageOptions1.SvgImageSize = new System.Drawing.Size(12, 12);
-            customHeaderButtonImageOptions2.ImageIndex = 52;
-            customHeaderButtonImageOptions2.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
-            customHeaderButtonImageOptions2.SvgImageSize = new System.Drawing.Size(12, 12);
+            customHeaderButtonImageOptions5.ImageIndex = 51;
+            customHeaderButtonImageOptions5.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
+            customHeaderButtonImageOptions5.SvgImageSize = new System.Drawing.Size(12, 12);
+            customHeaderButtonImageOptions6.ImageIndex = 52;
+            customHeaderButtonImageOptions6.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
+            customHeaderButtonImageOptions6.SvgImageSize = new System.Drawing.Size(12, 12);
             this.dockPanel5.CustomHeaderButtons.AddRange(new DevExpress.XtraBars.Docking2010.IButton[] {
-            new DevExpress.XtraBars.Docking.CustomHeaderButton("wrap", false, customHeaderButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.CheckButton, "", -1, true, null, true, true, true, serializableAppearanceObject1, null, -1),
-            new DevExpress.XtraBars.Docking.CustomHeaderButton("Clear", false, customHeaderButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, serializableAppearanceObject2, null, -1)});
+            new DevExpress.XtraBars.Docking.CustomHeaderButton("wrap", false, customHeaderButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.CheckButton, "", -1, true, null, true, true, true, serializableAppearanceObject5, null, -1),
+            new DevExpress.XtraBars.Docking.CustomHeaderButton("Clear", false, customHeaderButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, serializableAppearanceObject6, null, -1)});
             this.dockPanel5.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
             this.dockPanel5.FloatSize = new System.Drawing.Size(304, 139);
             this.dockPanel5.ID = new System.Guid("dbdb0ba9-5443-476b-93ad-ec35678d61ef");
-            this.dockPanel5.Location = new System.Drawing.Point(3, 33);
+            this.dockPanel5.Location = new System.Drawing.Point(4, 42);
+            this.dockPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel5.Name = "dockPanel5";
             this.dockPanel5.Options.ShowAutoHideButton = false;
             this.dockPanel5.Options.ShowCloseButton = false;
             this.dockPanel5.Options.ShowMaximizeButton = false;
-            this.dockPanel5.OriginalSize = new System.Drawing.Size(774, 102);
-            this.dockPanel5.Size = new System.Drawing.Size(727, 144);
+            this.dockPanel5.OriginalSize = new System.Drawing.Size(727, 144);
+            this.dockPanel5.Size = new System.Drawing.Size(908, 180);
             this.dockPanel5.Text = "Output";
             this.dockPanel5.CustomButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.dockPanel5_CustomButtonClick);
             this.dockPanel5.CustomButtonUnchecked += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.dockPanel5_CustomButtonUnchecked);
@@ -916,17 +927,18 @@ namespace CQC.ConTest
             // 
             this.dockPanel5_Container.Controls.Add(this.ucOutput1);
             this.dockPanel5_Container.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel5_Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel5_Container.Name = "dockPanel5_Container";
-            this.dockPanel5_Container.Size = new System.Drawing.Size(727, 144);
+            this.dockPanel5_Container.Size = new System.Drawing.Size(908, 180);
             this.dockPanel5_Container.TabIndex = 0;
             // 
             // ucOutput1
             // 
             this.ucOutput1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucOutput1.Location = new System.Drawing.Point(0, 0);
-            this.ucOutput1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ucOutput1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ucOutput1.Name = "ucOutput1";
-            this.ucOutput1.Size = new System.Drawing.Size(727, 144);
+            this.ucOutput1.Size = new System.Drawing.Size(908, 180);
             this.ucOutput1.TabIndex = 0;
             this.ucOutput1.text = "Welcome to Conformace Test System";
             // 
@@ -936,10 +948,11 @@ namespace CQC.ConTest
             this.dockPanel3.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
             this.dockPanel3.FloatSize = new System.Drawing.Size(304, 139);
             this.dockPanel3.ID = new System.Guid("7351d5e2-6da1-45c0-a5b6-13e4e7d7a56e");
-            this.dockPanel3.Location = new System.Drawing.Point(3, 33);
+            this.dockPanel3.Location = new System.Drawing.Point(4, 42);
+            this.dockPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel3.Name = "dockPanel3";
-            this.dockPanel3.OriginalSize = new System.Drawing.Size(774, 102);
-            this.dockPanel3.Size = new System.Drawing.Size(727, 144);
+            this.dockPanel3.OriginalSize = new System.Drawing.Size(727, 144);
+            this.dockPanel3.Size = new System.Drawing.Size(908, 180);
             this.dockPanel3.TabText = "Task List";
             this.dockPanel3.Text = "Task List - 0 Build Errors";
             // 
@@ -947,8 +960,9 @@ namespace CQC.ConTest
             // 
             this.dockPanel3_Container.Controls.Add(this.ucTaskList1);
             this.dockPanel3_Container.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel3_Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel3_Container.Name = "dockPanel3_Container";
-            this.dockPanel3_Container.Size = new System.Drawing.Size(727, 144);
+            this.dockPanel3_Container.Size = new System.Drawing.Size(908, 180);
             this.dockPanel3_Container.TabIndex = 0;
             // 
             // ucTaskList1
@@ -957,7 +971,7 @@ namespace CQC.ConTest
             this.ucTaskList1.Location = new System.Drawing.Point(0, 0);
             this.ucTaskList1.Margin = new System.Windows.Forms.Padding(2);
             this.ucTaskList1.Name = "ucTaskList1";
-            this.ucTaskList1.Size = new System.Drawing.Size(727, 144);
+            this.ucTaskList1.Size = new System.Drawing.Size(908, 180);
             this.ucTaskList1.TabIndex = 0;
             // 
             // dockPanel4
@@ -966,18 +980,20 @@ namespace CQC.ConTest
             this.dockPanel4.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
             this.dockPanel4.FloatSize = new System.Drawing.Size(304, 139);
             this.dockPanel4.ID = new System.Guid("47b3ea95-3900-46d6-b24c-5f3a779b1ae7");
-            this.dockPanel4.Location = new System.Drawing.Point(3, 33);
+            this.dockPanel4.Location = new System.Drawing.Point(4, 42);
+            this.dockPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel4.Name = "dockPanel4";
-            this.dockPanel4.OriginalSize = new System.Drawing.Size(774, 102);
-            this.dockPanel4.Size = new System.Drawing.Size(727, 144);
+            this.dockPanel4.OriginalSize = new System.Drawing.Size(727, 144);
+            this.dockPanel4.Size = new System.Drawing.Size(908, 180);
             this.dockPanel4.Text = "Find Results";
             // 
             // dockPanel4_Container
             // 
             this.dockPanel4_Container.Controls.Add(this.textBox1);
             this.dockPanel4_Container.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel4_Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dockPanel4_Container.Name = "dockPanel4_Container";
-            this.dockPanel4_Container.Size = new System.Drawing.Size(727, 144);
+            this.dockPanel4_Container.Size = new System.Drawing.Size(908, 180);
             this.dockPanel4_Container.TabIndex = 0;
             // 
             // textBox1
@@ -985,11 +1001,12 @@ namespace CQC.ConTest
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.EditValue = "";
             this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Properties.Appearance.Font = new System.Drawing.Font("Courier New", 8.25F);
             this.textBox1.Properties.Appearance.Options.UseFont = true;
             this.textBox1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textBox1.Size = new System.Drawing.Size(727, 144);
+            this.textBox1.Size = new System.Drawing.Size(908, 180);
             this.textBox1.TabIndex = 0;
             // 
             // iCloseCase
@@ -1002,6 +1019,7 @@ namespace CQC.ConTest
             this.iCloseCase.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("iCloseCase.ImageOptions.SvgImage")));
             this.iCloseCase.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.iCloseCase.Name = "iCloseCase";
+            this.iCloseCase.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // binewHartProject
             // 
@@ -1039,6 +1057,7 @@ namespace CQC.ConTest
             new DevExpress.XtraBars.LinkPersistInfo(this.iAddHartDevice),
             new DevExpress.XtraBars.LinkPersistInfo(this.iAddDPDevice)});
             this.siAddDevice.Name = "siAddDevice";
+            this.siAddDevice.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // iOpenProject
             // 
@@ -1069,6 +1088,7 @@ namespace CQC.ConTest
             this.iPageSetup.ImageOptions.ImageIndex = 8;
             this.iPageSetup.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.iPageSetup.Name = "iPageSetup";
+            this.iPageSetup.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // iPrint
             // 
@@ -1079,6 +1099,7 @@ namespace CQC.ConTest
             this.iPrint.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.iPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.iPrint.Name = "iPrint";
+            this.iPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // siFind
             // 
@@ -1263,6 +1284,7 @@ namespace CQC.ConTest
             this.barTestResult.ImageOptions.ImageIndex = 27;
             this.barTestResult.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.barTestResult.Name = "barTestResult";
+            this.barTestResult.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // biDevices
             // 
@@ -1271,6 +1293,7 @@ namespace CQC.ConTest
             this.biDevices.ImageOptions.ImageIndex = 10;
             this.biDevices.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.biDevices.Name = "biDevices";
+            this.biDevices.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // siFile
             // 
@@ -1312,6 +1335,7 @@ namespace CQC.ConTest
             this.iSaveAs.ImageOptions.ImageIndex = 41;
             this.iSaveAs.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.iSaveAs.Name = "iSaveAs";
+            this.iSaveAs.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.iSaveAs.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSaveAs_ItemClick);
             // 
             // siEdit
@@ -1351,6 +1375,7 @@ namespace CQC.ConTest
             new DevExpress.XtraBars.LinkPersistInfo(this.siExcClass),
             new DevExpress.XtraBars.LinkPersistInfo(this.siExcCase)});
             this.siExecute.Name = "siExecute";
+            this.siExecute.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // iProjectSettings
             // 
@@ -1468,8 +1493,9 @@ namespace CQC.ConTest
             // 
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.barManager;
+            this.toolbarFormControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(970, 30);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(1212, 37);
             this.toolbarFormControl1.TabIndex = 13;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.TitleItemLinks.Add(this.siFile);
@@ -1543,11 +1569,11 @@ namespace CQC.ConTest
             // frmMain
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(970, 550);
-            this.Controls.Add(this.panelContainer2);
+            this.ClientSize = new System.Drawing.Size(1212, 688);
             this.Controls.Add(this.dockPanel1);
+            this.Controls.Add(this.panelContainer2);
             this.Controls.Add(this.barDockControl3);
             this.Controls.Add(this.barDockControl4);
             this.Controls.Add(this.barDockControl2);
@@ -1555,6 +1581,7 @@ namespace CQC.ConTest
             this.Controls.Add(this.toolbarFormControl1);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmMain.IconOptions.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
             this.ShowText = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

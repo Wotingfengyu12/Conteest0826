@@ -1665,7 +1665,7 @@ namespace FieldIot.ProfibusDP
 
             //发送报文
             sendFrame("Set_Prm", aucFrame, ucFrameLen, asLocalDevCfgList.ElementAt(0).ucAddrS, false);
-            DPMasterControl();
+            //DPMasterControl();
             byte[] buff = new byte[MAX_RCV_BUFFER_SIZE];
 
             Thread.Sleep(1000);
@@ -1692,7 +1692,7 @@ namespace FieldIot.ProfibusDP
 
                         //发送报文
                         sendFrame("Get_Diag", aucFrame, ucFrameLen, asLocalDevCfgList.ElementAt(0).ucAddrS, false);
-                        DPMasterControl();
+                        //DPMasterControl();
 
                         Thread.Sleep(1000);
                         bytetoread = serialPort1.BytesToRead;
@@ -1807,7 +1807,7 @@ namespace FieldIot.ProfibusDP
 
                         //发送报文
                         sendFrame("Get_Diag", aucFrame, ucFrameLen, asLocalDevCfgList.ElementAt(0).ucAddrS, false);
-                        DPMasterControl();
+                        //DPMasterControl();
 
                         Thread.Sleep(1000);
                         bytetoread = serialPort1.BytesToRead;
@@ -1864,7 +1864,7 @@ namespace FieldIot.ProfibusDP
 
             byte[] buff = new byte[MAX_RCV_BUFFER_SIZE];
 
-            Thread.Sleep(1000);
+            Thread.Sleep(100);
             int bytetoread = serialPort1.BytesToRead;
             serialPort1.Read(buff, 0, bytetoread);
 
@@ -1876,7 +1876,7 @@ namespace FieldIot.ProfibusDP
             {
                 SimpleParseDPFrame(buff, (ushort)bytetoread, ref cFrameParse);
 
-                if (cFrameParse.strService == "FDL_Status")
+                if (cFrameParse.strMsgType == "Get_Diag")
                 {
                     return true;
                 }
@@ -2022,6 +2022,22 @@ namespace FieldIot.ProfibusDP
             cTransferBufferNode.bManuOper = bManuOper;
 
             asTransBuffetList.Add(cTransferBufferNode);
+
+            if (asTransBuffetList.Count > 0)
+            {
+                transferFrame(asTransBuffetList.ElementAt(0).aucFrame, asTransBuffetList.ElementAt(0).ucFrameLen);
+
+                string strFrameData = "";
+
+                strFrameData = buildStringTypeInfo(asTransBuffetList.ElementAt(0).ucFrameLen, asTransBuffetList.ElementAt(0).aucFrame);
+
+                //dataGridView2.Rows.Add(ucThisNode.ToString() + " -> " + asTransBuffetList.ElementAt(0).ucD_Addr, asTransBuffetList.ElementAt(0).strMsgType, strFrameData);
+                //dataGridView2.FirstDisplayedScrollingRowIndex = dataGridView2.RowCount - 1;
+                cFrameReqPending.strMsgType = asTransBuffetList.ElementAt(0).strMsgType;
+                bManulOper = asTransBuffetList.ElementAt(0).bManuOper;
+                asTransBuffetList.RemoveAt(0);
+                bIsReqPending = true;
+            }
 
             return true;
         }

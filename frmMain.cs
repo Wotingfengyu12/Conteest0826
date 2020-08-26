@@ -2089,17 +2089,28 @@ namespace CQC.ConTest
                     saveLogfile(sw, "Device {0} created successed", ddev.devName);
                     bDevOk = true;
                 }
-                else if (profibusDP.diagDevice(0, ref cframe))
-                {
-                    sendOutput(2, "Device {0} created successed", ddev.devName);
-                    saveLogfile(sw, "Device {0} created successed", ddev.devName);
-                    bDevOk = true;
-                }
                 else
                 {
-                    sendOutput(2, "Device {0} created failed", ddev.devName);
-                    saveLogfile(sw, "Device {0} created failed", ddev.devName);
-                    bDevOk = false;
+                    //profibusDP.diagDevice(0, ref cframe);
+                    //Thread.Sleep(300);
+                    //profibusDP.diagDevice(0, ref cframe);
+                    //Thread.Sleep(300);
+                    for (int i = 0; i < 5; i++)
+                    {
+                        if (profibusDP.diagDevice(0, ref cframe))
+                        {
+                            sendOutput(2, "Device {0} created successed", ddev.devName);
+                            saveLogfile(sw, "Device {0} created successed", ddev.devName);
+                            bDevOk = true;
+                            break;
+                        }
+                    }
+                    if (bDevOk == false)
+                    {
+                        sendOutput(2, "Device {0} created failed", ddev.devName);
+                        saveLogfile(sw, "Device {0} created failed", ddev.devName);
+                        //bDevOk = false;
+                    }
                 }
             }
             //return false;
